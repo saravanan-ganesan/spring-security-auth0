@@ -39,16 +39,7 @@ public class SecurityConfig {
         this.returnTo = returnTo;
         this.issuerUrl = issuerUrl;
     }
-    
-    /******************************************************************************
-	 * This method is used to configure the HTTP
-	 * 
-	 * @return void
-	 * ----------------------------------------------------------------------------
-	 * Version	Date		Developer	Comments
-	 * ----------------------------------------------------------------------------
-	 * 1.0		04/26/2021	Saravanan	Initial code
-	 ******************************************************************************/
+
     @Bean
     public SecurityWebFilterChain configure(ServerHttpSecurity http) throws Exception {
     	
@@ -71,16 +62,6 @@ public class SecurityConfig {
     }
 
 
-    /******************************************************************************
-	 * This method is used to configure  the logout handling to log users out 
-	 * of Auth0 after successful logout from the application.
-	 * 
-	 * @return ServerLogoutSuccessHandler handler for logout
-	 * ----------------------------------------------------------------------------
-	 * Version	Date		Developer	Comments
-	 * ----------------------------------------------------------------------------
-	 * 1.0		04/26/2021	Saravanan	Initial code
-	 ******************************************************************************/
     @Bean
     public ServerLogoutSuccessHandler logoutSuccessHandler() {
        
